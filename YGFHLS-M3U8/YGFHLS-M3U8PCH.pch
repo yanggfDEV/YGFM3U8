@@ -1,0 +1,38 @@
+//
+//  YGFHLS-M3U8PCH.pch
+//  YGFHLS-M3U8
+//
+//  Created by guangfu yang on 16/2/26.
+//  Copyright © 2016年 yangguangfu. All rights reserved.
+//
+
+#ifndef YGFHLS_M3U8PCH_pch
+#define YGFHLS_M3U8PCH_pch
+
+//系统文件
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+
+//工程文件
+#import "YGFParameterDetails.h"
+#import "HTTPServer.h"
+
+//下载视频的状态
+typedef NS_ENUM(NSInteger, DownloadVideoState){
+    DownloadVideoStateDownloading = 1,
+    DownloadVideoStateWating = 2,
+    DownloadVideoStatePausing = 3,
+    DownloadVideoStateFail = 4,
+    DownloadVideoStateFinish = 5,
+};
+
+//M3U8解析结果--失败的结果
+typedef NS_ENUM(NSInteger, M3U8AnalyseFail){
+    M3U8AnalyseFailNotM3U8Url = 1,
+    M3U8AnalyseFailNetworkUnConnection = 2,
+};
+
+
+#endif /* YGFHLS_M3U8PCH_pch */
